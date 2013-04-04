@@ -1,0 +1,159 @@
+/* Throw away */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+}
+
+div.placement {
+	padding: 40px 0 40px 0;
+}
+
+/* Fonts ----------------------------------------------------------------- */
+	@font-face {
+		font-family: "Source Sans";
+		src: url('font/SourceSansPro/SourceSansPro-Regular.otf');
+	}
+	@font-face {
+		font-family: "Source Sans";
+		src: url('font/SourceSansPro/SourceSansPro-Light.otf');
+		font-weight: 200;
+	}
+	@font-face {
+		font-family: "Source Sans";
+		src: url('font/SourceSansPro/SourceSansPro-Semibold.otf');
+		font-weight: 600;
+	}
+
+
+	@font-face {
+		font-family: "source";
+		src: url("font/SourceSansPro/SourceSansPro-Regular.otf");
+	}
+	@font-face {
+		font-family: "source-l";
+		src: url("font/SourceSansPro/SourceSansPro-Light.otf");
+		font-weight: 200;
+	}
+	@font-face {
+		font-family: "source-sb";
+		src: url("font/SourceSansPro/SourceSansPro-Semibold.otf");
+		font-weight: 600;
+	}
+
+/* Global ----------------------------------------------------------------- */
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	color: #000;
+	font: 16px "Source Sans", helvetica, arial, sans-serif;
+	font-weight: 200;
+	text-rendering: optimizeLegibility;
+}
+
+.disabled {
+	opacity: 0.3;
+	cursor: default;
+	pointer-events: none;
+}
+
+h2 {
+	font-weight: 300;
+	color: #666;
+	padding: 20px 10px;
+}
+
+/* List Styles */
+
+.list-header {
+	font-size: 100%;
+	font-weight: 200;
+	padding: 4px 20px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+}
+.list-header.light {
+	color: #454545;
+	border-top-color: #eff1f1;
+	border-bottom-color:#bcbfbf;
+	background-color: #d3d6d6;
+}
+.list-header.dark {
+	color: #c6c8c8;
+	border-top-color: #5e6061;
+	border-bottom-color:#2f3234;
+	background-color: #3a3c3c;
+}
+.dark-list {
+	background-color: #444849;
+}
+
+.light-list {
+	background-color: #dfe2e2;
+}
+
+.dark-list,
+.light-list {
+	display: block;
+	padding: 0;
+	list-style: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+    .dark-list > li,
+    .light-list > li {
+        background-repeat: no-repeat;
+        background-position: right 50%;
+        background-size: 12px 21px;
+        background-origin: content-box;
+		background-image: url("img/icn_disclosure_arrow_2x.png");
+    }
+.dark-list {
+	border-top: 1px solid #2f3234;
+	border-bottom: 1px solid #5e6061;
+	color: #c6c8c8;
+}
+	.dark-list > li {
+	/* Editable padding variable */
+		padding: 20px;
+		border-top: 1px solid #5e6061;
+		border-bottom: 1px solid #2f3234;
+	}
+
+.light-list {
+	border-top: 1px solid #bcbfbf;
+	border-bottom: 1px solid #eff1f1;
+	color: #454545;
+}
+
+.list-header ~ .light-list,
+.list-header ~ .dark-list {
+	border-top: 0;
+	border-bottom: 0;
+}
+
+	.light-list > li {
+	/* Editable padding variable */
+		padding: 20px;
+		border-top: 1px solid #eff1f1;
+		border-bottom: 1px solid #bcbfbf;
+	}
+.light-list.indexed:nth-last-child(1) > li,
+.dark-list.indexed:nth-last-child(1) > li {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.light-list.indexed:nth-last-child(1) > li {
+	border-bottom-color:#bcbfbf;
+}
+.dark-list.indexed:nth-last-child(1) > li {
+	border-bottom-color:#2f3234;
+}
