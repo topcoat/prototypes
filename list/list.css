@@ -8,42 +8,48 @@
 }
 
 div.placement {
-	padding: 40px 0 40px 0;
+	padding: 40px 0 80px;
+}
+    div.placement.light {
+        background-color: #dfe2e2;
+    }
+    div.placement.dark {
+        background-color: #444849;
+    }
+
+/* Global (not needed when merged with TopCoat)----------------------------------------------------------------- */
+
+@font-face {
+	font-family: "Source Sans";
+	src: url('font/SourceSansPro/SourceSansPro-Regular.otf');
+}
+@font-face {
+	font-family: "Source Sans";
+	src: url('font/SourceSansPro/SourceSansPro-Light.otf');
+	font-weight: 200;
+}
+@font-face {
+	font-family: "Source Sans";
+	src: url('font/SourceSansPro/SourceSansPro-Semibold.otf');
+	font-weight: 600;
 }
 
-/* Fonts ----------------------------------------------------------------- */
-	@font-face {
-		font-family: "Source Sans";
-		src: url('font/SourceSansPro/SourceSansPro-Regular.otf');
-	}
-	@font-face {
-		font-family: "Source Sans";
-		src: url('font/SourceSansPro/SourceSansPro-Light.otf');
-		font-weight: 200;
-	}
-	@font-face {
-		font-family: "Source Sans";
-		src: url('font/SourceSansPro/SourceSansPro-Semibold.otf');
-		font-weight: 600;
-	}
 
+@font-face {
+	font-family: "source";
+	src: url("font/SourceSansPro/SourceSansPro-Regular.otf");
+}
+@font-face {
+	font-family: "source-l";
+	src: url("font/SourceSansPro/SourceSansPro-Light.otf");
+	font-weight: 200;
+}
+@font-face {
+	font-family: "source-sb";
+	src: url("font/SourceSansPro/SourceSansPro-Semibold.otf");
+	font-weight: 600;
+}
 
-	@font-face {
-		font-family: "source";
-		src: url("font/SourceSansPro/SourceSansPro-Regular.otf");
-	}
-	@font-face {
-		font-family: "source-l";
-		src: url("font/SourceSansPro/SourceSansPro-Light.otf");
-		font-weight: 200;
-	}
-	@font-face {
-		font-family: "source-sb";
-		src: url("font/SourceSansPro/SourceSansPro-Semibold.otf");
-		font-weight: 600;
-	}
-
-/* Global ----------------------------------------------------------------- */
 body {
 	margin: 0;
 	padding: 0;
@@ -61,12 +67,20 @@ body {
 }
 
 h2 {
-	font-weight: 300;
-	color: #666;
-	padding: 20px 10px;
+	font-size: 120%;
+	font-weight: 100;
+	padding: 20px;
+}
+.light h2 {
+	color: #999;
+	text-shadow: 0 -1px 0 rgba(255,255,255,.5);
+}
+.dark h2 {
+	color: #777;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
 }
 
-/* List Styles */
+/* List Styles ----------------------------------------------------------------- */
 
 .list-header {
 	font-size: 100%;
@@ -77,25 +91,20 @@ h2 {
 	border-top-style: solid;
 	border-bottom-style: solid;
 }
-.list-header.light {
-	color: #454545;
-	border-top-color: #eff1f1;
-	border-bottom-color:#bcbfbf;
-	background-color: #d3d6d6;
-}
-.list-header.dark {
-	color: #c6c8c8;
-	border-top-color: #5e6061;
-	border-bottom-color:#2f3234;
-	background-color: #3a3c3c;
-}
-.dark-list {
-	background-color: #444849;
-}
 
-.light-list {
-	background-color: #dfe2e2;
-}
+	.list-header.light {
+		color: #454545;
+		border-bottom-color: #eff1f1;
+		border-top-color:#bcbfbf;
+		background-color: #d3d6d6;
+	}
+
+	.list-header.dark {
+		color: #c6c8c8;
+		border-top-color: #2f3234;
+		border-bottom-color:#5e6061;
+		background-color: #3a3c3c;
+	}
 
 .dark-list,
 .light-list {
@@ -107,53 +116,84 @@ h2 {
 	-webkit-user-select: none;
 }
 
-    .dark-list > li,
-    .light-list > li {
-        background-repeat: no-repeat;
-        background-position: right 50%;
-        background-size: 12px 21px;
-        background-origin: content-box;
-		background-image: url("img/icn_disclosure_arrow_2x.png");
-    }
 .dark-list {
 	border-top: 1px solid #2f3234;
 	border-bottom: 1px solid #5e6061;
 	color: #c6c8c8;
+	background-color: #444849;
 }
-	.dark-list > li {
-	/* Editable padding variable */
-		padding: 20px;
-		border-top: 1px solid #5e6061;
-		border-bottom: 1px solid #2f3234;
-	}
 
 .light-list {
+	background-color: #dfe2e2;
 	border-top: 1px solid #bcbfbf;
 	border-bottom: 1px solid #eff1f1;
 	color: #454545;
+
 }
 
+/* remove borders for lists in between headings */
 .list-header ~ .light-list,
 .list-header ~ .dark-list {
 	border-top: 0;
 	border-bottom: 0;
 }
 
+/* add borders on last list under headers */
+.list-header ~ .light-list:last-of-type {
+    border-bottom: 1px solid #eff1f1;
+}
+.list-header ~ .dark-list:last-of-type {
+    border-bottom: 1px solid #5e6061;
+}
+
+    .dark-list > li,
+    .light-list > li {
+        background-repeat: no-repeat;
+        background-position: right 50%;
+        background-size: 18px 18px;
+        background-origin: content-box;
+    }
+
+	    .light-list > li small {
+	        color: #999;
+	    }
+
+	    .dark-list > li small {
+	        color: #777;
+	    }
+
 	.light-list > li {
-	/* Editable padding variable */
 		padding: 20px;
 		border-top: 1px solid #eff1f1;
 		border-bottom: 1px solid #bcbfbf;
+		background-image: url("img/icn-disclosure-dark.svg");
 	}
-.light-list.indexed:nth-last-child(1) > li,
-.dark-list.indexed:nth-last-child(1) > li {
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
 
-.light-list.indexed:nth-last-child(1) > li {
-	border-bottom-color:#bcbfbf;
-}
-.dark-list.indexed:nth-last-child(1) > li {
-	border-bottom-color:#2f3234;
-}
+	.dark-list > li {
+		padding: 20px;
+		border-top: 1px solid #5e6061;
+		border-bottom: 1px solid #2f3234;
+		background-image: url("img/icn-disclosure-light.svg");
+	}
+
+    .list-header ~ .light-list > li:first-of-type {
+        border-top: 1px solid #bcbfbf;
+    }
+
+    .list-header ~ .dark-list > li:first-of-type {
+        border-top: 1px solid #2f3234;
+    }
+
+    .list-header ~ .light-list > li:last-of-type,
+    .list-header ~ .dark-list > li:last-of-type  {
+        border-bottom: 0;
+    }
+
+	.list-header ~ .light-list:last-child > li:last-of-type  {
+		border-bottom: 1px solid #bcbfbf;
+    }
+
+    .list-header ~ .dark-list:last-child > li:last-of-type  {
+		border-bottom: 1px solid #2f3234;
+    }
+    
