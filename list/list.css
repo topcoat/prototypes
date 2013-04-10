@@ -21,32 +21,32 @@ div.placement {
 
 @font-face {
 	font-family: "Source Sans";
-	src: url('font/SourceSansPro/SourceSansPro-Regular.otf');
+	src: url('../font/SourceSansPro/SourceSansPro-Regular.otf');
 }
 @font-face {
 	font-family: "Source Sans";
-	src: url('font/SourceSansPro/SourceSansPro-Light.otf');
+	src: url('../font/SourceSansPro/SourceSansPro-Light.otf');
 	font-weight: 200;
 }
 @font-face {
 	font-family: "Source Sans";
-	src: url('font/SourceSansPro/SourceSansPro-Semibold.otf');
+	src: url('../font/SourceSansPro/SourceSansPro-Semibold.otf');
 	font-weight: 600;
 }
 
 
 @font-face {
 	font-family: "source";
-	src: url("font/SourceSansPro/SourceSansPro-Regular.otf");
+	src: url("../font/SourceSansPro/SourceSansPro-Regular.otf");
 }
 @font-face {
 	font-family: "source-l";
-	src: url("font/SourceSansPro/SourceSansPro-Light.otf");
+	src: url("../font/SourceSansPro/SourceSansPro-Light.otf");
 	font-weight: 200;
 }
 @font-face {
 	font-family: "source-sb";
-	src: url("font/SourceSansPro/SourceSansPro-Semibold.otf");
+	src: url("../font/SourceSansPro/SourceSansPro-Semibold.otf");
 	font-weight: 600;
 }
 
@@ -196,4 +196,3 @@ h2 {
     .list-header ~ .dark-list:last-child > li:last-of-type  {
 		border-bottom: 1px solid #2f3234;
     }
-    
