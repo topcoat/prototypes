@@ -1,149 +1,150 @@
 /* Throw away */
 
 * {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style-type: none;
 }
 
 div.placement {
-	padding: 40px 0 80px;
+    padding: 40px 0 80px;
 }
-    div.placement.light {
-        background-color: #dfe2e2;
-    }
-    div.placement.dark {
-        background-color: #444849;
-    }
+div.placement.light {
+    background-color: #dfe2e2;
+}
+div.placement.dark {
+    background-color: #444849;
+}
 
 /* Global (not needed when merged with TopCoat)----------------------------------------------------------------- */
 
 @font-face {
-	font-family: "Source Sans";
-	src: url('../font/SourceSansPro/SourceSansPro-Regular.otf');
+    font-family: "Source Sans";
+    src: url('../font/SourceSansPro/SourceSansPro-Regular.otf');
 }
 @font-face {
-	font-family: "Source Sans";
-	src: url('../font/SourceSansPro/SourceSansPro-Light.otf');
-	font-weight: 200;
+    font-family: "Source Sans";
+    src: url('../font/SourceSansPro/SourceSansPro-Light.otf');
+    font-weight: 200;
 }
 @font-face {
-	font-family: "Source Sans";
-	src: url('../font/SourceSansPro/SourceSansPro-Semibold.otf');
-	font-weight: 600;
+    font-family: "Source Sans";
+    src: url('../font/SourceSansPro/SourceSansPro-Semibold.otf');
+    font-weight: 600;
 }
 
 
 @font-face {
-	font-family: "source";
-	src: url("../font/SourceSansPro/SourceSansPro-Regular.otf");
+    font-family: "source";
+    src: url("../font/SourceSansPro/SourceSansPro-Regular.otf");
 }
 @font-face {
-	font-family: "source-l";
-	src: url("../font/SourceSansPro/SourceSansPro-Light.otf");
-	font-weight: 200;
+    font-family: "source-l";
+    src: url("../font/SourceSansPro/SourceSansPro-Light.otf");
+    font-weight: 200;
 }
 @font-face {
-	font-family: "source-sb";
-	src: url("../font/SourceSansPro/SourceSansPro-Semibold.otf");
-	font-weight: 600;
+    font-family: "source-sb";
+    src: url("../font/SourceSansPro/SourceSansPro-Semibold.otf");
+    font-weight: 600;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	background-color: #fff;
-	color: #000;
-	font: 16px "Source Sans", helvetica, arial, sans-serif;
-	font-weight: 200;
-	text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    font: 16px "Source Sans", helvetica, arial, sans-serif;
+    font-weight: 200;
+    text-rendering: optimizeLegibility;
 }
 
 .disabled {
-	opacity: 0.3;
-	cursor: default;
-	pointer-events: none;
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
 }
 
 h2 {
-	font-size: 120%;
-	font-weight: 100;
-	padding: 20px;
+    font-size: 120%;
+    font-weight: 100;
+    padding: 20px;
 }
 .light h2 {
-	color: #999;
-	text-shadow: 0 -1px 0 rgba(255,255,255,.5);
+    color: #999;
+    text-shadow: 0 -1px 0 rgba(255,255,255,.5);
 }
 .dark h2 {
-	color: #888;
-	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    color: #888;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
 }
 
 /* List Styles ----------------------------------------------------------------- */
 
-.list-header {
-	font-size: 100%;
-	font-weight: 200;
-	padding: 4px 20px;
-	border-top-width: 1px;
-	border-bottom-width: 1px;
-	border-top-style: solid;
-	border-bottom-style: solid;
+.list-container.indexed.light {
+    border-top: 1px solid #bcbfbf;
 }
 
-	.list-header.light {
-		color: #454545;
-		border-top: 1px solid #eff1f1;
-		border-bottom-color:#bcbfbf;
-        background-color: #e8ebeb;
-	}
+.list-container.indexed.dark {
+    border-top: 1px solid #2f3234;
+}
 
-    .list-header.light:first-of-type {
-        box-shadow: 0 -1px 0 #bcbfbf;
-    }
+.list-header {
+    font-size: .9em;
+    font-weight: 200;
+    padding: 4px 20px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
 
-	.list-header.dark {
-		color: #c6c8c8;
-		border-bottom-color: #2f3234;
-		border-top-color:#5e6061;
-		background-color: #4c5052;
-	}
+.list-header.light {
+    color: #656565;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    border-top-color: rgba(255, 255, 255, .3);
+    border-bottom-color: rgba(255, 255, 255, .3);
+    background-color: #cccfcf;
+}
 
-    .list-header.dark:first-of-type {
-        box-shadow: 0 -1px 0 #2f3234;
-    }
+.list-header.dark {
+    color: #a6a8a8;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    border-top-color: rgba(255,255,255,.06);
+    border-bottom-color: rgba(255, 255, 255, .06);
+    background-color: #3b3e40;
+}
 
 .dark-list,
 .light-list {
-	display: block;
-	padding: 0;
-	list-style: none;
-	user-select: none;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
+    display: block;
+    padding: 0;
+    list-style: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
 }
 
 .dark-list {
-	border-top: 1px solid #2f3234;
-	border-bottom: 1px solid #5e6061;
-	color: #c6c8c8;
-	background-color: #444849;
+    border-top: 1px solid #2f3234;
+    border-bottom: 1px solid #5e6061;
+    color: #c6c8c8;
+    background-color: #444849;
 }
 
 .light-list {
-	background-color: #dfe2e2;
-	border-top: 1px solid #bcbfbf;
-	border-bottom: 1px solid #eff1f1;
-	color: #454545;
+    background-color: #dfe2e2;
+    border-top: 1px solid #bcbfbf;
+    border-bottom: 1px solid #eff1f1;
+    color: #454545;
 
 }
 
 /* remove borders for lists in between headings */
 .list-header ~ .light-list,
 .list-header ~ .dark-list {
-	border-top: 0;
-	border-bottom: 0;
+    border-bottom: 0;
 }
 
 /* add borders on last list under headers */
@@ -154,56 +155,42 @@ h2 {
     border-bottom: 1px solid #5e6061;
 }
 
-    .dark-list > li,
+.dark-list > li,
+.light-list > li {
+    background-repeat: no-repeat;
+    background-position: right 50%;
+    background-size: 18px 18px;
+    background-origin: content-box;
+}
+
+.light-list > li small {
+    color: #999;
+    }
+
+    .dark-list > li small {
+        color: #888;
+    }
+
     .light-list > li {
-        background-repeat: no-repeat;
-        background-position: right 50%;
-        background-size: 18px 18px;
-        background-origin: content-box;
+        padding: 20px;
+        border-top: 1px solid #eff1f1;
+        border-bottom: 1px solid #bcbfbf;
+        background-image: url("img/icn-disclosure-dark.svg");
+}
+
+.dark-list > li {
+    padding: 20px;
+    border-top: 1px solid #5e6061;
+    border-bottom: 1px solid #2f3234;
+    background-image: url("img/icn-disclosure-light.svg");
+}
+
+.list-header ~ .light-list > li:first-of-type,
+.list-header ~ .dark-list > li:first-of-type {
+    border-top-color: rgba(0,0,0,.03);
     }
 
-	    .light-list > li small {
-	        color: #999;
-	    }
-
-	    .dark-list > li small {
-	        color: #888;
-	    }
-
-	.light-list > li {
-		padding: 20px;
-		border-top: 1px solid #eff1f1;
-		border-bottom: 1px solid #bcbfbf;
-		background-image: url("img/icn-disclosure-dark.svg");
-	}
-
-	.dark-list > li {
-		padding: 20px;
-		border-top: 1px solid #5e6061;
-		border-bottom: 1px solid #2f3234;
-		background-image: url("img/icn-disclosure-light.svg");
-	}
-
-    .list-header ~ .light-list > li:first-of-type {
-/*        border-top: 1px solid #bcbfbf;*/
-    }
-
-    .list-header ~ .dark-list > li:first-of-type {
-/*        border-top: 1px solid #2f3234;*/
-    }
-/*
-    .list-header ~ .light-list > li:last-of-type {
-		border-bottom-color: #eff1f1;
-    }
-
-    .list-header ~ .dark-list > li:last-of-type {
-		border-bottom-color: #5e6061;
-    }
-*/
-	.list-header ~ .light-list:last-child > li:last-of-type  {
-		border-bottom: 1px solid #bcbfbf;
-    }
-
-    .list-header ~ .dark-list:last-child > li:last-of-type  {
-		border-bottom: 1px solid #2f3234;
-    }
+.list-header ~ .dark-list:last-child > li:last-of-type  {
+    u
+    border-bottom: 1px solid #2f3234;
+}
