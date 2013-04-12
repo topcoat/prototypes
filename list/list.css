@@ -92,7 +92,7 @@ h2 {
 
 .list-header {
     font-size: .9em;
-    font-weight: 200;
+    font-weight: 400;
     padding: 4px 20px;
     border-top-width: 1px;
     border-bottom-width: 1px;
@@ -103,16 +103,16 @@ h2 {
 .list-header.light {
     color: #656565;
     text-shadow: 0 1px 0 rgba(255,255,255,.5);
-    border-top-color: rgba(255, 255, 255, .3);
-    border-bottom-color: rgba(255, 255, 255, .3);
+    border-top-color: rgba(255, 255, 255, .5);
+    border-bottom-color: rgba(255, 255, 255, .23);
     background-color: #cccfcf;
 }
 
 .list-header.dark {
-    color: #a6a8a8;
-    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-    border-top-color: rgba(255,255,255,.06);
-    border-bottom-color: rgba(255, 255, 255, .06);
+    color: #868888;
+    text-shadow: 0 1px 0 rgba(0,0,0,.3);
+    border-top-color: rgba(255,255,255,.1);
+    border-bottom-color: rgba(255, 255, 255, .05);
     background-color: #3b3e40;
 }
 
@@ -187,10 +187,5 @@ h2 {
 
 .list-header ~ .light-list > li:first-of-type,
 .list-header ~ .dark-list > li:first-of-type {
-    border-top-color: rgba(0,0,0,.03);
-    }
-
-.list-header ~ .dark-list:last-child > li:last-of-type  {
-    u
-    border-bottom: 1px solid #2f3234;
+    border-top-color: rgba(0,0,0,.05);
 }
